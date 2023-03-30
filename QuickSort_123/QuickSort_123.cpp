@@ -113,3 +113,13 @@ void display() {
 	cout << " Number of Movements: " << mov_count << endl;
 
 }
+
+int main()
+{
+	input();
+	q_short(0, n - 1);							// sort the array using quick sort
+	display();
+	system("pause");
+
+	return 0;
+}
