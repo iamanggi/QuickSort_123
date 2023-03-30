@@ -9,7 +9,7 @@ int n;
 void input() {
 	while (true)
 	{
-		cout << "masukan panjang elemant array: ";
+		cout << "masukan panjang element array: ";
 		cin >> n;
 
 		if (n <= 20)
@@ -46,7 +46,7 @@ void q_short(int low, int high)
 	if (low > high)				// langkah Algoritma no 1
 		return;
 
-	// partition the list into two parts;
+	// partition the list into two parts
 	// one containing elements less that or equal to pivot
 	// outher containing elements greather than pivot
 
@@ -64,24 +64,24 @@ void q_short(int low, int high)
 			i++;											// langkah algoritma no 6
 			cmp_count++;
 		}
-	}
-	cmp_count++; 
-
-	//search for an element less than or equal to pivot 
-	while ((arr[i] > pivot) && (j >= low))					// langlah algoritma no 7
-	{
-		j--;												// langkah algoritma no 8
 		cmp_count++;
-	}
-	cmp_count;
+		//search for an element less than or equal to pivot 
+		while ((arr[j] > pivot) && (j >= low))					// langlah algoritma no 7
+		{
+			j--;												// langkah algoritma no 8
+			cmp_count++;
+		}
+		cmp_count;
 
-	//if the greater element is on the left of the element 
-	if (i < j)												// langkah algoritma no 9
-	{
-		// swap the element at index i with the elemant at index j
-		swap(i, j);
-		mov_count++;
+		//if the greater element is on the left of the element 
+		if (i < j)												// langkah algoritma no 9
+		{
+			// swap the element at index i with the elemant at index j
+			swap(i, j);
+			mov_count++;
+		}
 	}
+
 
 	// j now containt the indexof the last element in the sorted list 
 
@@ -100,7 +100,7 @@ void q_short(int low, int high)
 
 void display() {
 	cout << "\n-----------" << endl;
-	cout << " Sorted Array " << endl;
+	cout << "\nSorted Array " << endl;
 	cout << "\n-----------" << endl;
 
 	for (int i = 0; i < n; i++)
@@ -110,7 +110,7 @@ void display() {
 	}
 
 	cout << "\n\nNumber of comparasions: " << cmp_count << endl;
-	cout << " Number of Movements: " << mov_count << endl;
+	cout << "Number of Movements: " << mov_count << endl;
 
 }
 
