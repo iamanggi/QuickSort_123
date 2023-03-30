@@ -45,4 +45,10 @@ void q_short(int low, int high)
 	int pivot, i, j;
 	if (low > high)				// langkah Algoritma no 1
 		return;
+
+	// partition the list into two parts;
+	// one containing elements less that or equal to pivot
+	// outher containing elements greather than pivot
+
+	pivot = arr[low];			// Langkah algoritma no 2
 }
