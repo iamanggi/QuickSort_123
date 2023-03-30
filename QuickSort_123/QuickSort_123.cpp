@@ -65,4 +65,8 @@ void q_short(int low, int high)
 			cmp_count++;
 		}
 	}
+	cmp_count++; 
+
+	//search for an element less than or equal to pivot 
+	while ((arr[i] > pivot)&& (j >=low))					// langlah algoritma no 7
 }
